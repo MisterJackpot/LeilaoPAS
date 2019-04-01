@@ -8,13 +8,19 @@ import java.util.ArrayList;
 
 public class BancoMocado {
 
-    ArrayList<ProdutoDTO> produtos = new ArrayList<>();
-    ArrayList<CompradorDTO> compradores = new ArrayList<>();
-    ArrayList<VendedorDTO> vendedores = new ArrayList<>();
+    private static ArrayList<ProdutoDTO> produtos = new ArrayList<>();
+    private static ArrayList<CompradorDTO> compradores = new ArrayList<>();
+    private static ArrayList<VendedorDTO> vendedores = new ArrayList<>();
 
-    public void crudProduto(ProdutoDTO produto){
-        return;
+    public static void adicionarProduto(ProdutoDTO produto){
+        produtos.add(produto);
     }
+
+    public static ArrayList<ProdutoDTO> listarProdutos(){
+        ArrayList<ProdutoDTO> retorno = (ArrayList<ProdutoDTO>) produtos.clone();
+        return retorno;
+    }
+
     public void crudComprador(CompradorDTO comprador){
         return;
     }
