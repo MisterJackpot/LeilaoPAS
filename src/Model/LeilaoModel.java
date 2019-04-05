@@ -1,5 +1,7 @@
 package Model;
 
+import BancoMocado.BancoMocado;
+import DTO.LanceDTO;
 import DTO.ProdutoDTO;
 
 import java.util.ArrayList;
@@ -20,8 +22,8 @@ public class LeilaoModel {
         return produtoModel.listarProdutos();
     }
 
-    public void adicionarLance(String comprador, double valor){
-
-    };
+    public ArrayList<LanceDTO> listarLances(){
+        return BancoMocado.listarLances();
+    }
 
 }

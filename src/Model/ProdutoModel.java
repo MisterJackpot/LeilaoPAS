@@ -13,7 +13,7 @@ public class ProdutoModel {
     }
 
     public ArrayList<ProdutoDTO> listarProdutos(){
-        return BancoMocado.getProdutos();
+        return BancoMocado.listarProdutos();
     }
 
     public void removerProduto(String nome){
