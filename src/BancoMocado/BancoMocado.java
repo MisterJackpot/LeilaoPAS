@@ -16,16 +16,12 @@ public class BancoMocado {
         produtos.add(produto);
     }
 
-    public static ArrayList<ProdutoDTO> listarProdutos(){
-        ArrayList<ProdutoDTO> retorno = (ArrayList<ProdutoDTO>) produtos.clone();
-        return retorno;
+    public static ArrayList<ProdutoDTO> getProdutos() {
+        return produtos;
     }
 
-    public void crudComprador(CompradorDTO comprador){
-        return;
-    }
-    public void crudVendedor(VendedorDTO vendedor){
-        return;
+    public static void removerProduto(ProdutoDTO produto){
+        produtos.remove(produto);
     }
 
 }
