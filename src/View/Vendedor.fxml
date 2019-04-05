@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="500.0" maxWidth="350.0" minHeight="500.0" minWidth="350.0" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.VendedorController">
+   <children>
+      <ListView fx:id="listaItens" layoutX="75.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField fx:id="fieldNome" layoutX="101.0" layoutY="315.0" />
+      <Label layoutX="101.0" layoutY="298.0" text="Nome do Item" />
+      <Button fx:id="btnAddItem" onAction="#adicionarItem" layoutX="142.0" layoutY="356.0" mnemonicParsing="false" text="Adicionar" />
+   </children>
+</AnchorPane>

@@ -19,7 +19,8 @@ import static com.sun.corba.se.impl.util.Utility.printStackTrace;
 
 public class LoginController extends Application {
 
-    private LeilaoController listaLeilao;
+    private VendedorController vendedorController;
+    private Stage pS;
 
     @FXML
     Button btnLgn;
@@ -33,30 +34,28 @@ public class LoginController extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Hello World!");
+        pS = primaryStage;
+        pS.setTitle("Hello World!");
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("../View/Login.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        primaryStage.setScene(new Scene(root, 350, 500));
-        primaryStage.setResizable(false);
-        primaryStage.show();
+        pS.setScene(new Scene(root, 350, 500));
+        pS.setResizable(false);
+        pS.show();
 
-        btnLgn = new Button();
+    }
 
-        btnLgn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                listaLeilao = new LeilaoController();
-                try {
-                    System.out.println("AQUI");
-                    listaLeilao.start(primaryStage);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+    @FXML
+    private void login(){
+        vendedorController = new VendedorController();
+        try {
+            System.out.println("AQUI");
+            vendedorController.start( (Stage) btnLgn.getScene().getWindow());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
